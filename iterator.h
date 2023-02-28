@@ -11,6 +11,10 @@ public:
 		return *this;
 	}
 
+	void operator++(Type) {
+		m_ptr++;
+	}
+
 	iterator& operator--() {
 		m_ptr--;
 		return *this;
