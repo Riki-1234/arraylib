@@ -12,7 +12,7 @@ endif()
 project ("arrayLib")
 
 # Add source to this project's executable.
-add_executable (arrayLib "main.cpp"   "array.h" "iterator.h")
+add_executable (arrayLib "main.cpp"   "vector.h" "iterator.h")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET arrayLib PROPERTY CXX_STANDARD 20)

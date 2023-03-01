@@ -1,9 +1,9 @@
 ﻿#include <iostream>
-#include "array.h"
+#include "vector.h"
 #include <algorithm>
 
 int main() {
-	array<int, 10> nums{0};
+	vector<int, 10> nums{0};
 	nums[1] = 10;
 
 	for (iterator<int> iterator = nums.begin(); iterator != nums.end(); iterator++) {
@@ -13,8 +13,17 @@ int main() {
 
 	nums.erase(nums.begin() + 1);
 
-	for (iterator<int> iterator = nums.begin(); iterator != nums.end(); iterator++) {
+	for (auto iterator = nums.begin(); iterator != nums.end(); iterator++) {
 		std::cout << *iterator << " ";
 	}
 	std::cout << std::endl;
+
+	nums.pop_back();
+
+	for (auto iterator = nums.begin(); iterator != nums.end(); iterator++) {
+		std::cout << *iterator << " ";
+	}
+	std::cout << std::endl;
+
+	std::cout << nums.front() << " " << nums.back();
 }
