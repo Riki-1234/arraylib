@@ -27,6 +27,12 @@ public:
 	Type& operator*() const {
 		return *m_ptr;
 	}
+
+	iterator operator+(size_t amount) {
+		iterator it(*this);
+		it.m_ptr += amount;
+		return it;
+	}
 private:
 	Type* m_ptr;
 };

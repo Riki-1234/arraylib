@@ -56,6 +56,13 @@ public:
 		m_array[m_size - 1] = newElement;
 	}
 
+	void erase(iterator<Type> iterator) {
+		for (; iterator != end(); iterator++) {
+			*iterator = *(iterator + 1);
+		}
+		resize(m_size - 1);
+	}
+
 	iterator<Type> begin() {
 		return iterator<Type>(m_array);
 	}
